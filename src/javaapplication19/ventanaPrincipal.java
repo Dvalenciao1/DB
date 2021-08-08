@@ -267,6 +267,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     //Al presionar el boton nos envia a la 2da pagina donde se encuentran los jtables y carga los datos
     private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
         menu.setSelectedIndex(1);
+        jToggleButton1.setSelected(true);
     }//GEN-LAST:event_btnConsultarActionPerformed
 
     //Al presionar el boton elimina los datos de las filas selecionadas de alguna tabla
