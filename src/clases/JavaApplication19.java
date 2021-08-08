@@ -5,7 +5,7 @@
  */
 package clases;
 
-import javaapplication19.ventanaPrincipal;
+import ventanas.ventanaPrincipal;
 
 /**
  *

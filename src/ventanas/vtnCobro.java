@@ -1,4 +1,4 @@
-package javaapplication19;
+package ventanas;
 
 import clases.Base_De_Datos;
 import clases.Cobro;
