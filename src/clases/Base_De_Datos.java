@@ -77,29 +77,6 @@ public class Base_De_Datos {
                     + "FROM servicio AS se\n"
                     + "INNER JOIN tipocobro AS ti ON se.idServicio = " + cobro.getIdServicio() + " AND ti.idTipoCobro = " + cobro.getIdTipoCobro() + ";";
             PreparedStatement statment = cn.prepareStatement(sentencia1);
-//            String[] listaDatos = new String[5];
-//            String sentencia1 = "SELECT se.idServicio, ti.idTipoCobro, se.precio\n"
-//                    + ",(se.precio *ti.porDscto) AS Descuento, se.precio - (se.precio *ti.porDscto)  AS total\n"
-//                    + "FROM servicio AS se\n"
-//                    + "INNER JOIN tipocobro AS ti ON se.idServicio = " + cobro.getIdServicio() + "\n"
-//                    + "AND ti.idTipoCobro = " + cobro.getIdTipoCobro() + "; ";
-//            ResultSet rs = statment.executeQuery();
-//            while (rs.next()) {
-//                listaDatos[0] = String.valueOf(rs.getInt("idServicio"));
-//                listaDatos[1] = String.valueOf(rs.getInt("idTipoCobro"));
-//                listaDatos[2] = String.valueOf(rs.getFloat("precio"));
-//                listaDatos[3] = String.valueOf(rs.getFloat("Descuento"));
-//                listaDatos[4] = String.valueOf(rs.getFloat("total"));
-//            }
-//
-//            int idServ = Integer.parseInt(listaDatos[0]);
-//            int idTipo = Integer.parseInt(listaDatos[1]);
-//            float subt = Float.parseFloat(listaDatos[2]);
-//            float descuento = Float.parseFloat(listaDatos[3]);
-//            float total = Float.parseFloat(listaDatos[4]);
-//            if (total < 0) {
-//                total = 0;
-//            }
             statment.executeUpdate();
             desconectarBaseDeDatos(cn); // Terminamos la conexion con la base de Servicio debido a que consume recursos
             return true;
